@@ -4,5 +4,21 @@ sources:
     tables:
       - name: klanten
         identifier: customers
+        columns:
+          - name: id
+            data_tests: 
+              - not_null
+              - unique
       - name: bestellingen
         identifier: orders
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
+
+          - name: status
+            data_tests:
+              - accepted_values:
+                  arguments:
+                    values: ['returned', 'return_pending', 'completed', 'shipped', 'placed']
