@@ -1,0 +1,12 @@
+sources:
+  - name: stripe
+    schema: stripe
+    tables:
+      - name: inkomende_betalingen
+        identifier: incoming_payments
+        columns:
+          - name: ID
+            data_test:
+              - not_null
+
+
