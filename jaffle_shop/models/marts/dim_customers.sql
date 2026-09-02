@@ -1,21 +1,14 @@
 with customers as (
 
-select
-    id as customer_id,
-    first_name,
-    last_name
-from jaffle_app.customers
+select *
+from {{ ref('stg_jaffle_app_klanten')}}
 
 ),
 
 orders as (
 
-select
-    id as order_id,
-    user_id as customer_id,
-    order_date,
-    status as order_status
-from jaffle_app.orders
+select *
+from {{ ref('stg_jaffle_app_bestellingen') }}
 
 ),
 

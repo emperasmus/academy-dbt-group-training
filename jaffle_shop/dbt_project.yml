@@ -1,4 +1,3 @@
-
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
@@ -32,9 +31,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   jaffle_shop_analytics:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    marts:
+      +materialized: table
+    staging:
       +materialized: view
-
 # Raw seed data is loaded into dedicated schemas per source system, so models
 # can read e.g. `jaffle_app.customers`. The literal schema names (instead of
 # dbt's default `<target>_<schema>`) are enforced by the generate_schema_name

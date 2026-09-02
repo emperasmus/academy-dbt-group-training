@@ -1,0 +1,8 @@
+sources:
+  - name: jaffle_app
+    schema: jaffle_app
+    tables:
+      - name: klanten
+        identifier: customers
+      - name: bestellingen
+        identifier: orders

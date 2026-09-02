@@ -16,5 +16,5 @@ duckdb_dev:
       path: jaffle_shop.duckdb
       # Schema your own models build into. Override with DBT_SCHEMA if you want
       # an isolated schema (e.g. to compare your work with a colleague's).
-      schema: "{{ env_var('DBT_SCHEMA', 'dbt_dev') }}"
+      schema: "{{ env_var('DBT_SCHEMA', 'dbt_emp') }}"
       threads: 4
